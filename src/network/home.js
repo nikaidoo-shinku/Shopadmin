@@ -152,3 +152,36 @@ export function rolesDelete(id) {
         method: 'delete'
     })
 }
+
+// 商品管理接口
+export function cateListData(querInfo) {
+    return request({
+        url: '/categories',
+        params: {
+            type: querInfo.type,
+            pagenum: querInfo.pagenum,
+            pagesize: querInfo.pagesize
+        }
+    })
+}
+
+export function ParentCateListData() {
+    return request({
+        url: '/categories',
+        params: {
+            type: 2,
+        }
+    })
+}
+
+export function addCateData(addCateForm) {
+    return request({
+        url: '/categories',
+        method: 'post',
+        data: {
+            cat_pid: addCateForm.cat_pid,
+            cat_name: addCateForm.cat_name,
+            cat_level: addCateForm.cat_level
+        }
+    })
+}

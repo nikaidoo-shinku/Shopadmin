@@ -130,11 +130,11 @@
         :model="addRolesForm"
         :rules="addRolesFormRules"
         ref="addRolesFormRef"
-        label-width="70px"
-        ><el-form-item label="角色名" prop="roleName"
+        label-width="100px"
+        ><el-form-item label="角色名称：" prop="roleName"
           ><el-input v-model="addRolesForm.roleName"></el-input
         ></el-form-item>
-        <el-form-item label="角色描述" prop="roleDesc"
+        <el-form-item label="角色描述：" prop="roleDesc"
           ><el-input v-model="addRolesForm.roleDesc"></el-input
         ></el-form-item>
       </el-form>
@@ -155,12 +155,12 @@
         :model="editRolesForm"
         :rules="addRolesFormRules"
         ref="editRolesFormRef"
-        label-width="70px"
+        label-width="100px"
       >
-        <el-form-item label="角色名" prop="roleName">
+        <el-form-item label="角色名称：" prop="roleName">
           <el-input v-model="editRolesForm.roleName"></el-input>
         </el-form-item>
-        <el-form-item label="角色描述" prop="roleDesc">
+        <el-form-item label="角色描述：" prop="roleDesc">
           <el-input v-model="editRolesForm.roleDesc"></el-input>
         </el-form-item>
       </el-form>
