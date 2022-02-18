@@ -185,3 +185,68 @@ export function addCateData(addCateForm) {
         }
     })
 }
+
+export function paramsCateListData() {
+    return request({
+        url: '/categories'
+    })
+}
+
+export function paramsManageCateListData(cateId, activeName) {
+    return request({
+        url: `categories/${cateId}/attributes`,
+        params: {
+            sel: activeName
+        }
+    })
+}
+
+export function addParamsData(cateId, attr_name, attr_sel) {
+    return request({
+        url: `categories/${cateId}/attributes`,
+        method: 'post',
+        data: {
+            attr_name,
+            attr_sel
+        }
+    })
+}
+
+export function queryParamsData(id, attrId, activeName) {
+    return request({
+        url: `categories/${id}/attributes/${attrId}`,
+        params: {
+            attr_sel: activeName
+        }
+    })
+}
+
+export function editParamsData(id, attrId, attr_name, attr_sel) {
+    return request({
+        url: `categories/${id}/attributes/${attrId}`,
+        method: 'put',
+        data: {
+            attr_name,
+            attr_sel
+        }
+    })
+}
+
+export function deleteParamsData(id, attrId) {
+    return request({
+        url: `categories/${id}/attributes/${attrId}`,
+        method: 'delete'
+    })
+}
+
+export function editManyParamsData(id, attrId, attr_name, attr_sel, attr_vals) {
+    return request({
+        url: `categories/${id}/attributes/${attrId}`,
+        method: 'put',
+        data: {
+            attr_name,
+            attr_sel,
+            attr_vals
+        }
+    })
+}
