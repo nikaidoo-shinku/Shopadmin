@@ -285,3 +285,21 @@ export function addGoodsData(form) {
         }
     })
 }
+
+// 订单管理接口
+export function orderListData(queryInfo) {
+    return request({
+        url: 'orders',
+        params: {
+            query: queryInfo.query,
+            pagenum: queryInfo.pagenum,
+            pagesize: queryInfo.pagesize
+        }
+    })
+}
+
+// export function progressData() {
+//     return request({
+//         url: '/kuaidi/1106975712662'
+//     })
+// }
