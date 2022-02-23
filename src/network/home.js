@@ -303,3 +303,10 @@ export function orderListData(queryInfo) {
 //         url: '/kuaidi/1106975712662'
 //     })
 // }
+
+// 数据统计接口
+export function reportData() {
+    return request({
+        url: 'reports/type/1'
+    })
+}
